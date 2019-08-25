@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Item</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <form>
+        <input placeholder="Enter Item" id="item" type="text" class="validate">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Add
+            <i class="material-icons right"></i>
+        </button>
+
+
+    </form>
+    <script>
+        const electron = require('electron');
+        const { ipcRenderer } = electron;
+
+        const form = document.querySelector("form");
+        form.addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+            const item = document.querySelector("#item").value;
+            ipcRenderer.send("item:add", item);
+        }
+    </script>
+</body>
+
+</html>

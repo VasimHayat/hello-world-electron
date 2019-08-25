@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Wold Electron</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a class="brand-logo center">Shopping List</a>
+        </div>
+    </nav>
+
+    <ul> </ul>
+
+    <script>
+        const electron = require('electron');
+        const { ipcRenderer } = electron;
+
+        const ul = document.querySelector("ul");
+
+        ipcRenderer.on("item:add", function (e, item) {
+            ul.className = "collection";
+            var li = document.createElement("li");
+            li.className = "collection-item";
+            var itemText = document.createTextNode(item);
+            li.appendChild(itemText);
+            ul.appendChild(li);
+        });
+
+        ipcRenderer.on("item:clear", function (e, item) {
+            ul.innerHTML = "";
+            ul.className = "";
+        });
+    </script>
+</body>
+
+</html>
