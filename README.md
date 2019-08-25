@@ -10,7 +10,7 @@ To clone and run this repository you'll need [Git](https://github.com/VasimHayat
 
 ```bash
 # Clone this repository
-git clone  it
+git clone  it https://github.com/VasimHayat/hello-world-electron.git
 # Go into the repository
 cd hello-world
 # Install dependencies
