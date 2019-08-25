@@ -1,11 +1,12 @@
-# Electron-hellow-world 
+# Electron-hello-world 
 
+**Electron JS basic example to add/delete shoping item by using ipcRenderer 
 **Clone and run for a quick way to see Electron-News-App in action.**
  
 
 ## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this repository you'll need [Git](https://github.com/VasimHayat/hello-world-electron) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
