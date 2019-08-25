@@ -1,5 +1,4 @@
-# Electron-Headlines
- 
+# Electron-hellow-world 
 
 **Clone and run for a quick way to see Electron-News-App in action.**
  
